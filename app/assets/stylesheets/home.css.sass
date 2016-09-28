@@ -1,0 +1,447 @@
+html
+  width: 100%
+  height: 100%
+
+body
+  width: 100%
+  height: 100%
+  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif
+  color: (#7c0354 !important)
+
+hr
+  max-width: 50px
+  border-color: (#7c0354 !important)
+  border-width: 3px
+  &.light
+    border-color: #fff
+
+a
+  color: (#7c0354 !important)
+  -webkit-transition: all .35s
+  -moz-transition: all .35s
+  transition: all .35s
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif
+
+p
+  margin-bottom: 20px
+  font-size: 16px
+  line-height: 1.5
+
+.bg-primary
+  background-color: (#7c0354 !important)
+
+.bg-dark
+  color: (#7c0354 !important)
+  background-color: #222
+
+.text-faded
+  color: (#7c0354 !important)
+
+section
+  padding: 100px 0
+
+aside
+  padding: 50px 0
+
+.no-padding
+  padding: 0
+
+.navbar-default
+  border-color: rgba(34, 34, 34, 0.05)
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif
+  background-color: #fff
+  -webkit-transition: all .35s
+  -moz-transition: all .35s
+  transition: all .35s
+  .navbar-header .navbar-brand
+    text-transform: uppercase
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif
+    font-weight: 700
+    color: (#7c0354 !important)
+
+.navbar-default .nav > li
+  > a
+    text-transform: uppercase
+    font-size: 13px
+    font-weight: 700
+    color: #222
+    &:focus
+      text-transform: uppercase
+      font-size: 13px
+      font-weight: 700
+      color: #222
+    &:hover, &:focus:hover
+      color: (#7c0354 !important)
+  &.active > a
+    color: #7c0354 !important
+    background-color: transparent
+    &:focus
+      color: #7c0354 !important
+      background-color: transparent
+    &:hover, &:focus:hover
+      background-color: transparent
+
+@media (min-width: 768px)
+  .navbar-default
+    border-color: rgba(255, 255, 255, 0.3)
+    background-color: transparent
+    .navbar-header .navbar-brand
+      color: (#7c0354 !important)
+      &:hover, &:focus
+        color: (#7c0354 !important)
+    .nav > li > a
+      color: (#7c0354 !important)
+      &:focus
+        color: (#7c0354 !important)
+    &.affix
+      border-color: rgba(34, 34, 34, 0.05)
+      background-color: #fff
+      .navbar-header .navbar-brand
+        font-size: 14px
+        color: (#7c0354 !important)
+        &:hover, &:focus
+          color: (#7c0354 !important)
+      .nav > li > a
+        color: #222
+        &:focus
+          color: #222
+        &:hover, &:focus:hover
+          color: (#7c0354 !important)
+
+header
+  position: relative
+  width: 100%
+  min-height: auto
+  text-align: center
+  color: #fff
+  background-image: url(../assets/prescottdoulaedit.jpg)
+  background-position: left
+  background-repeat: no-repeat
+  background-size: 60%
+  background-attachment: fixed
+  .header-content
+    position: relative
+    width: 100%
+    padding: 100px 15px
+    text-align: center
+    .header-content-inner
+      margin-top: 0
+      margin-bottom: 0
+      text-transform: uppercase
+      font-weight: 700
+      hr
+        margin: 30px auto
+      p
+        margin-bottom: 50px
+        font-size: 16px
+        font-weight: 300
+        color: (#7c0354 !important)
+
+@media (max-width: 768px)
+  header
+    background-color: white
+    background-image: none
+
+@media (min-width: 768px)
+  header
+    min-height: 100%
+    .header-content
+      position: absolute
+      top: 50%
+      padding: 0 50px
+      -webkit-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      transform: translateY(-50%)
+      .header-content-inner
+        margin-right: auto
+        margin-left: auto
+        max-width: 1000px
+        p
+          margin-right: auto
+          margin-left: auto
+          max-width: 80%
+          font-size: 18px
+
+.section-heading
+  margin-top: 0
+
+.service-box
+  margin: 50px auto 0
+  max-width: 400px
+  p
+    margin-bottom: 0
+
+@media (min-width: 992px)
+  .service-box
+    margin: 20px auto 0
+
+.portfolio-box
+  display: block
+  position: relative
+  margin: 0 auto
+  max-width: 650px
+  .portfolio-box-caption
+    display: block
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 100%
+    text-align: center
+    color: #fff
+    opacity: 0
+    background: rgba(240, 95, 64, 0.9)
+    -webkit-transition: all .35s
+    -moz-transition: all .35s
+    transition: all .35s
+    .portfolio-box-caption-content
+      position: absolute
+      top: 50%
+      width: 100%
+      text-align: center
+      transform: translateY(-50%)
+      .project-category, .project-name
+        padding: 0 15px
+        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif
+      .project-category
+        text-transform: uppercase
+        font-size: 14px
+        font-weight: 600
+      .project-name
+        font-size: 18px
+  &:hover .portfolio-box-caption
+    opacity: 1
+
+@media (min-width: 768px)
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content
+    .project-category
+      font-size: 16px
+    .project-name
+      font-size: 22px
+
+.call-to-action h2
+  margin: 0 auto 20px
+
+.text-primary
+  color: (#7c0354 !important)
+
+.no-gutter > [class*=col-]
+  padding-right: 0
+  padding-left: 0
+
+.btn-default
+  color: white !important
+  background-color: (#7c0354 !important)
+
+.btn-second
+  color: (#7c0354 !important)
+  background-color: white
+
+.btn-default
+  &.disabled, &[disabled]
+    border-color: #fff
+    background-color: #fff
+
+fieldset[disabled] .btn-default
+  border-color: #fff
+  background-color: #fff
+
+.btn-default
+  &.disabled:hover, &[disabled]:hover
+    border-color: #fff
+    background-color: #fff
+
+fieldset[disabled] .btn-default:hover
+  border-color: #fff
+  background-color: #fff
+
+.btn-default
+  &.disabled:focus, &[disabled]:focus
+    border-color: #fff
+    background-color: #fff
+
+fieldset[disabled] .btn-default:focus
+  border-color: #fff
+  background-color: #fff
+
+.btn-default
+  &.disabled.focus, &[disabled].focus
+    border-color: #fff
+    background-color: #fff
+
+fieldset[disabled] .btn-default.focus
+  border-color: #fff
+  background-color: #fff
+
+.btn-default
+  &.disabled:active, &[disabled]:active
+    border-color: #fff
+    background-color: #fff
+
+fieldset[disabled] .btn-default:active
+  border-color: #fff
+  background-color: #fff
+
+.btn-default
+  &.disabled.active, &[disabled].active
+    border-color: #fff
+    background-color: #fff
+
+fieldset[disabled] .btn-default.active
+  border-color: #fff
+  background-color: #fff
+
+.btn-default
+  &:hover
+    text-decoration: none
+    background-color: (#7c0354 !important)
+    color: white
+  .badge
+    color: #fff
+    background-color: #222
+
+.btn-primary
+  border-color: (#7c0354 !important)
+  color: #fff
+  background-color: (#7c0354 !important)
+  -webkit-transition: all .35s
+  -moz-transition: all .35s
+  transition: all .35s
+  &:hover, &:focus, &.focus, &:active, &.active
+    border-color: #ed431f
+    color: #fff
+    background-color: #ee4b28
+
+.open > .dropdown-toggle.btn-primary
+  border-color: #ed431f
+  color: #fff
+  background-color: #ee4b28
+
+.btn-primary
+  &:active, &.active
+    background-image: none
+
+.open > .dropdown-toggle.btn-primary
+  background-image: none
+
+.btn-primary
+  &.disabled, &[disabled]
+    border-color: (#7c0354 !important)
+    background-color: (#7c0354 !important)
+
+fieldset[disabled] .btn-primary
+  border-color: (#7c0354 !important)
+  background-color: (#7c0354 !important)
+
+.btn-primary
+  &.disabled:hover, &[disabled]:hover
+    border-color: (#7c0354 !important)
+    background-color: (#7c0354 !important)
+
+fieldset[disabled] .btn-primary:hover
+  border-color: (#7c0354 !important)
+  background-color: (#7c0354 !important)
+
+.btn-primary
+  &.disabled:focus, &[disabled]:focus
+    border-color: (#7c0354 !important)
+    background-color: (#7c0354 !important)
+
+fieldset[disabled] .btn-primary:focus
+  border-color: (#7c0354 !important)
+  background-color: (#7c0354 !important)
+
+.btn-primary
+  &.disabled.focus, &[disabled].focus
+    border-color: (#7c0354 !important)
+    background-color: (#7c0354 !important)
+
+fieldset[disabled] .btn-primary.focus
+  border-color: (#7c0354 !important)
+  background-color: (#7c0354 !important)
+
+.btn-primary
+  &.disabled:active, &[disabled]:active
+    border-color: (#7c0354 !important)
+    background-color: (#7c0354 !important)
+
+fieldset[disabled] .btn-primary:active
+  border-color: (#7c0354 !important)
+  background-color: (#7c0354 !important)
+
+.btn-primary
+  &.disabled.active, &[disabled].active
+    border-color: (#7c0354 !important)
+    background-color: (#7c0354 !important)
+
+fieldset[disabled] .btn-primary.active
+  border-color: (#7c0354 !important)
+  background-color: (#7c0354 !important)
+
+.btn-primary .badge
+  color: (#7c0354 !important)
+  background-color: #fff
+
+.btn
+  border: 0
+  border-radius: 300px !important
+  text-transform: uppercase
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif
+  font-weight: 700 !important
+
+.btn-xl
+  padding: 15px 30px !important
+
+\::-moz-selection, ::selection
+  text-shadow: none
+  color: #fff
+  background: #222
+
+img
+  &::selection, &::-moz-selection
+    color: #fff
+    background: 0 0
+
+body
+  webkit-tap-highlight-color: #222
+
+.phone p
+  color: (#7c0354 !important)
+  text-decoration: none
+  padding: 10px
+
+.fa-phone
+  color: (#7c0354 !important)
+  text-decoration: none
+
+.phone p:hover, .fa-phone:hover
+  color: (#7c0354 !important)
+  text-decoration: none
+  font-weight: bold
+
+.email
+  color: (#7c0354 !important)
+  text-decoration: none
+  padding: 10px
+
+.fa-envelope-o
+  color: (#7c0354 !important)
+  text-decoration: none
+
+.email:hover, .fa-envelope-o:hover
+  color: (#7c0354 !important)
+  text-decoration: none
+  font-weight: bold
+
+.header-content-inner h3
+  color: (#7c0354 !important)
+
+.aboutMeText
+  padding-bottom: 20px
+
+.img-to-white
+  filter: invert(100%)
+
+#contact
+  display: none
