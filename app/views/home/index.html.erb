@@ -122,7 +122,7 @@
                     </div>
                     <br></br>
                 </div>
-               <a href="#contact" class="btn btn-second btn-xl page-scroll contactBtn">Contact Me!</a> 
+               <a href="#contact" class="btn btn-second btn-xl page-scroll contactBtn">Contact Me!</a>
             </div>
         </div>
     </div>
@@ -136,39 +136,32 @@
                 <hr class="primary">
             </div>
 
-            <form id="contactForm">
+            <%= form_for @message, url: contact_path do |message_form| %>
+              <form id="contactForm">
+                  <div class="form-group">
+                  <label for="name">Name:</label>
+                  <%= message_form.text_field :name, id: "name" class: "form-control"%>
+                  <!-- <input type="name" class="form-control" id="name"> -->
+                </div>
                 <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="name" class="form-control" id="name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email">
-              </div>
-              <div class="form-group">
-                <label for="pwd">Phone number:</label>
-                <input type="password" class="form-control" id="pwd">
-              </div>
-              <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea class="form-control" rows="5" id="comment"></textarea>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-
-            <!-- <div class="header-content-inner col-lg-6 col-md-6 text-center">
-              <a class="email" href="mailto:prescottdoula@gmail.com">
-                <i class="fa fa-envelope-o fa-5x"></i>
-                <p>Email</p>
-              </a>
-            </div>
-
-            <div class="header-content-inner col-lg-6 col-md-6 text-center">
-              <a class="email" href="tel:928-848-3517">
-                <i class="fa fa-phone fa-5x"></i>
-                <p>Call</p>
-              </a>
-            </div> -->
+                  <label for="email">Email address:</label>
+                  <%= message_form.email_field :email, id: "email" class: "form-control" %>
+                  <!-- <input type="email" class="form-control" id="email"> -->
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Phone number:</label>
+                  <%= message_form.phone :email, id: "phone" class: "form-control" %>
+                  <!-- <input type="password" class="form-control" id="pwd"> -->
+                </div>
+                <div class="form-group">
+                  <label for="comment">Comment:</label>
+                  <%= message_form.text_area :content, id: "content" class:"form-control"%>
+                  <!-- <textarea class="form-control" rows="5" id="comment"></textarea> -->
+                </div>
+                <%= message_form.submit "Send" class:"btn btn-default"%>
+                <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+              </form>
+              <% end %>
         </div>
     </div>
 </section>
